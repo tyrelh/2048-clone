@@ -5,6 +5,12 @@ var ORANGE_DARK = "#FA6900";
 var BLUE_LIGHT = "";
 var BLUE_DARK = "";
 
+// directions
+var UP = "up";
+var DOWN = "down";
+var LEFT = "left";
+var RIGHT = "right";
+
 var MAIN_FONT;
 
 function preload() {

@@ -8,28 +8,21 @@ function Game() {
 
     this.board = new Board();
 
-    this.slideUp = function() {
-        console.log("up");
+    // movement control
+    this.slide = function(dir) {
+        console.log(dir);
+        this.board.slide(dir);
     }
-    this.slideDown = function() {
-        console.log("down");
-
-    }
-    this.slideLeft = function() {
-        console.log("left");
-
-    }
-    this.slideRight = function() {
-        console.log("right");
-
-    }
+    
     this.addTile = function() {
         //this.board.push(new Tile());
     }
+
 
     this.draw = function() {
         this.board.draw();
     }
     this.update = function() {
+        this.board.update();
     }
 }

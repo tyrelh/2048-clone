@@ -5,6 +5,7 @@ function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
     // desired frame rate
     frameRate(60);
+    textFont(MAIN_FONT);
     background(20,20,22);
     
     game = new Game();
@@ -22,8 +23,9 @@ function staticRender() {
 }
 
 function keyPressed() {
-    if (keyCode === UP_ARROW) game.slideUp();
-    else if (keyCode === RIGHT_ARROW) game.slideRight();
-    else if (keyCode === DOWN_ARROW) game.slideDown();
-    else if (keyCode === LEFT_ARROW) game.slideLeft();
+    console.log(keyCode);
+    if (keyCode === UP_ARROW) game.slide(UP);
+    else if (keyCode === RIGHT_ARROW) game.slide(RIGHT);
+    else if (keyCode === DOWN_ARROW) game.slide(DOWN);
+    else if (keyCode === LEFT_ARROW) game.slide(LEFT);
 }

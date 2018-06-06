@@ -4,7 +4,14 @@ function Board() {
     this.tiles = [];
     this.tiles.push(new Tile());
 
+    this.slide = function(dir) {
+        let i;
+        for (i = 0; i < this.tiles.length; i++) {
+            this.tiles[i].slide(dir);
+        }
+    }
     this.update = function() {
+        let i;
         for (i = 0; i < this.tiles.length; i++) {
             this.tiles[i].update();
         }
