@@ -21,11 +21,3 @@ function draw() {
 function staticRender() {
     background(20,20,22);
 }
-
-function keyPressed() {
-    console.log(keyCode);
-    if (keyCode === UP_ARROW) game.slide(UP);
-    else if (keyCode === RIGHT_ARROW) game.slide(RIGHT);
-    else if (keyCode === DOWN_ARROW) game.slide(DOWN);
-    else if (keyCode === LEFT_ARROW) game.slide(LEFT);
-}

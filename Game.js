@@ -1,8 +1,3 @@
-var GAME_BOARD_W = 4;
-var GAME_BOARD_H = 4;
-var TILE_W = 100;
-var TILE_H = 140;
-
 
 function Game() {
 
@@ -10,14 +5,13 @@ function Game() {
 
     // movement control
     this.slide = function(dir) {
-        console.log(dir);
+        // console.log(dir);
         this.board.slide(dir);
     }
-    
-    this.addTile = function() {
-        //this.board.push(new Tile());
-    }
 
+    this.addTile = function() {
+        this.board.addTile();
+    }
 
     this.draw = function() {
         this.board.draw();
@@ -25,4 +19,23 @@ function Game() {
     this.update = function() {
         this.board.update();
     }
+}
+
+function keyPressed() {
+    // console.log(keyCode);
+    if (keyCode === UP_ARROW) game.slide(UP);
+    else if (keyCode === DOWN_ARROW) game.slide(DOWN);
+    else if (keyCode === LEFT_ARROW) game.slide(LEFT);
+    else if (keyCode === RIGHT_ARROW) game.slide(RIGHT);
+    
+    else if (keyCode === 78) { // n key
+        game.addTile();
+    }
+    else if (keyCode === 67) { // c key
+        game.board.cheat();
+    }
+    // if (keyCode === UP_ARROW) game.slide(UP);
+    // else if (keyCode === RIGHT_ARROW) game.slide(RIGHT);
+    // else if (keyCode === DOWN_ARROW) game.slide(DOWN);
+    // else if (keyCode === LEFT_ARROW) game.slide(LEFT);
 }
